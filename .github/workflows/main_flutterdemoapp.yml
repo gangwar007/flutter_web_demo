@@ -36,9 +36,6 @@ jobs:
           name: node-app
           path: release.zip
 
-      - name: Build for Flutter web
-        run: flutter build web
-
   deploy:
     runs-on: ubuntu-latest
     needs: build
