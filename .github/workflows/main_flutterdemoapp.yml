@@ -53,12 +53,6 @@ jobs:
           name: production-files
           path: ./build
 
-      - name: Deploy to gh-pages
-        uses: azure/webapps-deploy@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-      
       - name: Login to Azure
         uses: azure/login@v1
         with:
@@ -72,5 +66,6 @@ jobs:
         with:
           app-name: 'flutterdemoapp'
           slot-name: 'Production'
+          publish_dir: ./build
           package: .
           
