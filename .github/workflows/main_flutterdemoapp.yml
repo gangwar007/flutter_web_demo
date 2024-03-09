@@ -21,11 +21,9 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm install, build, and test
+      - name: Build for FLutter web
         run: |
-          npm install
-          npm run build --if-present
-          npm run test --if-present
+          flutter build web
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
