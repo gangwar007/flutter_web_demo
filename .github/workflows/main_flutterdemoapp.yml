@@ -37,7 +37,7 @@ jobs:
           path: release.zip
 
       - name: Flutter web build
-        run: flutter build web
+        run: fvm flutter build web
 
   deploy:
     runs-on: ubuntu-latest
