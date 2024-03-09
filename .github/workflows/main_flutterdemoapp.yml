@@ -51,7 +51,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: production-files
-          path: ./build
+          path: ./build/web
 
       - name: Login to Azure
         uses: azure/login@v1
@@ -67,6 +67,6 @@ jobs:
           app-name: 'flutterdemoapp'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          publish_dir: ./build
+          publish_dir: ./build/web
           package: .
           
