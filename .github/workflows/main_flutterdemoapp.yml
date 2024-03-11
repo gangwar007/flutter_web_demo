@@ -50,8 +50,6 @@ jobs:
           name: node-app
           path: release.zip
 
-      - name: Flutter web build
-        run: fvm flutter build web
 
   deploy:
     runs-on: ubuntu-latest
